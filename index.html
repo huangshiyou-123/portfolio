@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黄世游 — 作品集</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh; color: #333;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+
+    /* Hero */
+    .hero { text-align: center; color: #fff; margin-bottom: 60px; }
+    .hero h1 { font-size: 36px; margin-bottom: 8px; }
+    .hero .subtitle { font-size: 18px; opacity: 0.9; margin-bottom: 4px; }
+    .hero .tagline { font-size: 14px; opacity: 0.7; margin-top: 12px; }
+
+    /* Tags */
+    .tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+    .tag { background: rgba(255,255,255,0.2); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 13px; }
+
+    /* Project cards */
+    .projects { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .project-card {
+      background: #fff; border-radius: 16px; padding: 32px; width: 420px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15); transition: transform 0.2s;
+    }
+    .project-card:hover { transform: translateY(-4px); }
+    .project-icon { font-size: 40px; margin-bottom: 16px; }
+    .project-card h2 { font-size: 22px; color: #303133; margin-bottom: 4px; }
+    .project-card .stack { color: #909399; font-size: 13px; margin-bottom: 16px; }
+    .project-card .desc { color: #606266; font-size: 14px; line-height: 1.8; margin-bottom: 20px; }
+    .project-card .features { list-style: none; margin-bottom: 20px; }
+    .project-card .features li { padding: 4px 0; font-size: 14px; color: #606266; }
+    .project-card .features li::before { content: '▸ '; color: #409eff; }
+
+    /* Buttons */
+    .btn { display: inline-block; padding: 10px 24px; border-radius: 8px; font-size: 14px;
+      text-decoration: none; font-weight: 500; transition: all 0.2s; }
+    .btn-primary { background: #409eff; color: #fff; }
+    .btn-primary:hover { background: #337ecc; }
+    .btn-outline { border: 2px solid #409eff; color: #409eff; margin-left: 8px; }
+    .btn-outline:hover { background: #ecf5ff; }
+
+    /* Footer */
+    .footer { text-align: center; color: rgba(255,255,255,0.6); margin-top: 60px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>黄世游</h1>
+      <p class="subtitle">计算机网络技术专业 · 大专在读</p>
+      <p class="tagline">目标岗位：IT 桌面运维 / IT 实习生 · 2026 年 7 月到岗</p>
+      <div class="tags">
+        <span class="tag">Node.js</span>
+        <span class="tag">Vue 3</span>
+        <span class="tag">Element Plus</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">SQLite</span>
+        <span class="tag">Prisma ORM</span>
+        <span class="tag">SSE 流式传输</span>
+        <span class="tag">ECharts</span>
+        <span class="tag">Docker</span>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="projects">
+
+      <!-- IT Asset Manager -->
+      <div class="project-card">
+        <div class="project-icon">🖥️</div>
+        <h2>IT 资产管理系统</h2>
+        <p class="stack">Vue 3 + Element Plus · Node.js · SQLite · ECharts</p>
+        <p class="desc">面向 IT 桌面运维岗位的资产全生命周期管理工具。</p>
+        <ul class="features">
+          <li>硬件、软件、网络设备、外设统一管理</li>
+          <li>领用登记 / 归还追踪</li>
+          <li>维保记录（维修 / 保养 / 升级）</li>
+          <li>ECharts 仪表盘 + 饼图统计</li>
+          <li>CSV 数据导出</li>
+          <li>SQLite 单文件数据库，零配置启动</li>
+        </ul>
+        <a href="http://localhost:5177" class="btn btn-primary">在线演示</a>
+        <a href="https://github.com/huangshiyou/it-asset-manager" class="btn btn-outline">源代码</a>
+      </div>
+
+      <!-- AI Chat Platform -->
+      <div class="project-card">
+        <div class="project-icon">🤖</div>
+        <h2>AI 对话平台</h2>
+        <p class="stack">Vue 3 + Element Plus · Node.js Fastify · PostgreSQL · Prisma</p>
+        <p class="desc">完整的商业级 AI 大模型对话服务平台，支持多模型路由和 Token 计费。</p>
+        <ul class="features">
+          <li>手机号验证码登录 / 注册</li>
+          <li>SSE 流式对话，支持 DeepSeek 等多家模型</li>
+          <li>套餐订阅 + 按量计费系统</li>
+          <li>管理后台（用户管理 / 手动充值 / 统计）</li>
+          <li>JWT 鉴权 + 频率限制 + 内容审核</li>
+          <li>完整设计文档 + 实现计划</li>
+        </ul>
+        <a href="http://localhost:5176" class="btn btn-primary">在线演示</a>
+        <a href="https://github.com/huangshiyou/ai-chat-platform" class="btn btn-outline">源代码</a>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © 2026 黄世游 · 简历附 PDF 版
+    </div>
+  </div>
+</body>
+</html>
